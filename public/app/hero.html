@@ -1,0 +1,44 @@
+
+<div ng-controller="Controller">
+<!-- 	<p>The ID is {{greeting.id}}</p> -->
+<!-- 	<p>The content is {{greeting.content}}</p> -->
+<!-- 	{{postac | json}} -->
+
+	<div>
+		<ul>
+			<li>Name: {{postac.name}}</li>
+			<li>Class: {{postac.heroClass.name}}</li>
+			<li>keywords:
+				<ul>
+					<li ng-repeat="keyword in postac.keywords">{{keyword.name}}</li>
+				</ul>
+			</li>
+		</ul>
+		<div>
+			<h3>
+				Skills:
+				</h1>
+				<ul>
+					<li>luck: {{postac.skills.luck}}</li>
+					<li>strength: {{postac.skills.strength}}</li>
+					<li>lore: {{postac.skills.lore}}</li>
+					<li>cunning: {{postac.skills.cunning}}</li>
+					<li>agility: {{postac.skills.agility}}</li>
+					<li>spirit: {{postac.skills.spirit}}</li>
+				</ul>
+				<p>Initiative: {{postac.initiative}}</p>
+		</div>
+		<p>Abilities</p>
+		<ul>
+			<li ng-repeat="ability in postac.abilities">{{ability.name}}</li>
+		</ul>
+
+		<p>Items</p>
+		<ul>
+			<li ng-repeat="item in postac.items">{{item.name}}</li>
+		</ul>
+	</div>
+
+</div>
+
+
