@@ -1,0 +1,50 @@
+
+<div>
+	<!-- 	<p>The ID is {{greeting.id}}</p> -->
+	<!-- 	<p>The content is {{greeting.content}}</p> -->
+	<!-- 	 	{{postac | json}} -->
+	<input type="submit" value="Save" ng-click="ctrl.create(postac)">
+	<div>
+		<form novalidate class="newHeroForm">
+			<ul>
+				<li>ID: {{postac.id}}</li>
+				<li>Name: <input ng-model="postac.name" /></li>
+				<li>Class: <input ng-model="postac.heroClass.name" /></li>
+				<!-- 			<li>keywords: -->
+				<!-- 				<ul> -->
+				<!-- 					<li ng-repeat="keyword in postac.keywords">{{keyword.name}}</li> -->
+				<!-- 				</ul> -->
+				<!-- 			</li> -->
+			</ul>
+			<div>
+				<h3>Skills:</h3>
+				<ul>
+					<li>luck: <input ng-model="postac.skills.luck" /></li>
+					<li>strength: <input ng-model="postac.skills.strength" />
+					</li>
+					<li>lore: <input ng-model="postac.skills.lore" /></li>
+					<li>cunning: <input ng-model="postac.skills.cunning" /></li>
+					<li>agility: <input ng-model="postac.skills.agility" /></li>
+					<li>spirit: <input ng-model="postac.skills.spirit" /></li>
+				</ul>
+				<p>
+					Initiative: <input ng-model="postac.initiative" />
+				</p>
+			</div>
+			<p>Abilities</p>
+			<ul>
+				<!-- 			<li ng-repeat="ability in postac.abilities">{{ability.name}}</li> -->
+			</ul>
+
+			<p>Items</p>
+			<ul>
+				<!-- 			<li ng-repeat="item in postac.items">{{item.name}}</li> -->
+			</ul>
+
+
+		</form>
+	</div>
+
+</div>
+
+

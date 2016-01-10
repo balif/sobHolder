@@ -1,9 +1,10 @@
 
-<div ng-controller="Controller">
+<div >
 <!-- 	<p>The ID is {{greeting.id}}</p> -->
 <!-- 	<p>The content is {{greeting.content}}</p> -->
 <!-- 	{{postac | json}} -->
-
+	
+	<input type="submit" value="Edit" ng-click="ctrl.editHero(postac)" >
 	<div>
 		<ul>
 			<li>Name: {{postac.name}}</li>
@@ -17,7 +18,7 @@
 		<div>
 			<h3>
 				Skills:
-				</h1>
+				</h3>
 				<ul>
 					<li>luck: {{postac.skills.luck}}</li>
 					<li>strength: {{postac.skills.strength}}</li>

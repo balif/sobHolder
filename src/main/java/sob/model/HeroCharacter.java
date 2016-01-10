@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class HeroCharacter {
@@ -26,6 +27,16 @@ public class HeroCharacter {
 	List<Item> items;
 	List<Ability> abilities;
 	
+	public HeroCharacter() {
+	}
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+		
 	public String getName() {
 		return name;
 	}
@@ -116,12 +127,7 @@ public class HeroCharacter {
 	public void setAbilities(List<Ability> abilities) {
 		this.abilities = abilities;
 	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+
 	
 	
 }

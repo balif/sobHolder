@@ -6,7 +6,7 @@ import sob.dto.HeroShort;
 import sob.model.HeroCharacter;
 
 public interface HeroService {
-	HeroCharacter findHeroByName(String name);
+	HeroCharacter saveHero(HeroCharacter hero);
 	
 	HeroCharacter findHeroById(String id);
 	

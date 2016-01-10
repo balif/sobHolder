@@ -1,5 +1,6 @@
 
-<div ng-controller="ListController" >
+<div >
+<input type="button" value="Add New Hero" ng-click="ctrl.addHero()"/>
 <ul >
 	<li ng-repeat="hero in heroesList">
 		<a href="#/hero/{{hero.id}}">Id: {{hero.id}} </a>

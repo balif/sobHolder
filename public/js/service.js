@@ -1,6 +1,6 @@
 'use strict';
 
-App.factory('Service', [ '$http', '$q', function($http, $q) {
+App.factory('Service', [ '$http', '$q','$resource', function($http, $q,$resource) {
 
 	return {
 
@@ -26,6 +26,19 @@ App.factory('Service', [ '$http', '$q', function($http, $q) {
 			return $http.get('../heroes').then(function(response) {
 				return response.data;
 			});
+		},
+		
+		heroPost : function(hero) {
+			return $http.post('../heroC',hero).then(function(response) {
+				return response.data;
+			}, function(errResponse) {
+				console.error('Hero donst exist');
+				return $q.reject(errResponse);
+			});
+		},
+		
+		heroResource : function(){
+			return $resource("../heroC");
 		}
 
 	};
